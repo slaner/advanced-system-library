@@ -1,0 +1,20 @@
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\bin\Debug\AdvSystem.dll
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\bin\Debug\AdvSystem.pdb
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\bin\Debug\AdvSystem.xml
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\Debug\AdvSystem.Resources.resources
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\Debug\AdvSystem.dll
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\Debug\AdvSystem.xml
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\Debug\AdvSystem.pdb
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\bin\Debug\AdvSystem.dll
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\bin\Debug\AdvSystem.pdb
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\bin\Debug\AdvSystem.xml
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\obj\Debug\AdvSystem.Resources.resources
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\obj\Debug\AdvSystem.dll
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\obj\Debug\AdvSystem.xml
+C:\Users\hWang\Desktop\.NET Projects\Active\AdvSystem\AdvSystem\obj\Debug\AdvSystem.pdb

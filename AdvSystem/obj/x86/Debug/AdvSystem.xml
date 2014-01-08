@@ -1,0 +1,2367 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AdvSystem
+</name>
+</assembly>
+<members>
+<member name="M:AdvSystem.Diagnostics.Process.IconInfo.#ctor(System.UInt32)">
+	<summary>
+ 지정한 프로세스의 아이콘 정보를 저장하는 IconInfo 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">아이콘 정보를 가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.IconInfo.Small">
+	<summary>
+ 작은 아이콘의 핸들을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.IconInfo.Large">
+	<summary>
+ 큰 아이콘의 핸들을 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.MemoryUsageInfo.#ctor(System.UInt32)">
+	<summary>
+ 지정한 프로세스의 메모리 사용량 정보를 저장하는 MemoryUsageInfo 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">메모리 사용량 정보를 가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.MemoryUsageInfo.PrivateUsage">
+	<summary>
+ 개인 메모리 사용량을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.MemoryUsageInfo.PageFaultCount">
+	<summary>
+ 페이지 폴트 개수를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.MemoryUsageInfo.PagefileUsage">
+	<summary>
+ 페이지 파일 사용량을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.MemoryUsageInfo.WorkingSet">
+	<summary>
+ 워킹셋 크기를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.MemoryUsageInfo.PagedPoolUsage">
+	<summary>
+ 페이징된 풀 사용량을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.MemoryUsageInfo.NonPagedPoolUsage">
+	<summary>
+ 페이징되지 않은 풀 사용량을 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.ModuleList.#ctor(System.UInt32)">
+	<summary>
+ 지정한 프로세스의 모듈 목록을 저장하는 ModuleList 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">모듈 목록을 가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.ModuleList.Modules">
+	<summary>
+ 모듈의 정보가 들어있는 리스트를 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.ModuleList.Refresh(System.UInt32)">
+	<summary>
+ 모듈 리스트를 갱신합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.ModuleList.BuildModuleList(System.UInt32)">
+	<summary>
+ 모듈 리스트를 생성합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.#ctor(System.UInt32)">
+	<summary>
+ 프로세스를 제어 및 관리하고, 정보를 저장하는 Process 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="ProcessId">Process 클래스의 새 개체를 만들 프로세스의 식별자를 입력합니다.</param>
+	<remarks></remarks>
+</member><member name="M:AdvSystem.Diagnostics.Process.initProcess(System.UInt32)">
+	<summary>
+ 개체를 초기화합니다.
+ </summary>
+	<param name="ProcessId">프로세스 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.Terminate(System.Int32)">
+	<summary>
+ 프로세스를 종료합니다.
+ </summary>
+	<param name="ExitCode">종료 코드를 입력합니다. (기본값은 0입니다)</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.Update">
+	<summary>
+ 프로세스의 정보를 갱신합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.Suspend">
+	<summary>
+ 프로세스의 작업을 정지합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.Resume">
+	<summary>
+ 프로세스의 작업을 재개합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.SetPriority(AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass)">
+	<summary>
+ 프로세스의 우선 순위를 설정합니다.
+ </summary>
+	<param name="PriorityClass">변경할 우선 순위를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.Name">
+	<summary>
+ 프로세스의 이름을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Id">
+	<summary>
+ 프로세스의 식별자를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.DomainUsername">
+	<summary>
+ 프로세스의 도메인 및 사용자 이름을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Priority">
+	<summary>
+ 프로세스의 우선 순위 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Affinity">
+	<summary>
+ 프로세스의 CPU 선호도 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.MemoryUsage">
+	<summary>
+ 프로세스의 메모리 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Privilege">
+	<summary>
+ 프로세스의 특권 목록을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Module">
+	<summary>
+ 프로세스에 연결된 모듈 목록을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.File">
+	<summary>
+ 프로세스의 파일 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.IsDebugged">
+	<summary>
+ 프로세스가 디버그 상태에 있는지 여부를 나타내는 값을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.MotherProcess">
+	<summary>
+ 프로세스의 부모 프로세스 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Platform">
+	<summary>
+ 프로세스의 플랫폼 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Path">
+	<summary>
+ 프로세스의 파일 경로를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.CommandLine">
+	<summary>
+ 프로세스의 명령줄 인수를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.Icon">
+	<summary>
+ 프로세스의 아이콘 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_Id">
+	<summary>
+ 식별자를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_ImageName">
+	<summary>
+ 이미지 파일 이름을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_DomainName">
+	<summary>
+ 도메인 이름을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_MotherId">
+	<summary>
+ 부모 프로세스의 식별자를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_Affinity">
+	<summary>
+ CPU 선호도 정보를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_Module">
+	<summary>
+ 모듈 목록의 정보를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_Priority">
+	<summary>
+ 우선 순위를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_MemoryUsage">
+	<summary>
+ 메모리 정보를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_Icon">
+	<summary>
+ 아이콘 정보를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_Privilege">
+	<summary>
+ 특권 목록을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_File">
+	<summary>
+ 파일 정보를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.g_StringInfo">
+	<summary>
+ 문자열 정보를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.AffinityInfo.CPUAffinityMask">
+	<summary>
+ CPU 선호도를 저장하는 변수입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.AffinityInfo">
+	<summary>
+ 특정 프로세스에 대한 CPU 선호도 정보를 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.IconInfo.g_ProcessImagePath">
+	<summary>
+ 프로세스의 실행 파일 위치를 저장하는 변수입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.IconInfo">
+	<summary>
+ 프로세스의 아이콘 정보를 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.ModuleList.g_ModuleInfoList">
+	<summary>
+ 모듈 목록을 리스트로 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.g_DllBase">
+	<summary>
+ 모듈의 기본 주소를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.g_EntryPoint">
+	<summary>
+ 모듈의 진입점(Entry point)을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.g_FullDllName">
+	<summary>
+ 모듈의 전체 경로를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.g_BaseDllName">
+	<summary>
+ 모듈의 파일 이름을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.g_ImageSize">
+	<summary>
+ 모듈의 파일 크기를 저장하는 변수입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo">
+	<summary>
+ 모듈에 대한 정보를 포함하는 클래스입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.ModuleList">
+	<summary>
+ 프로세스에 로드된 모듈 목록을 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.MemoryUsageInfo.g_PageFaultCount">
+	<summary>
+ 페이지 폴트의 갯수를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.MemoryUsageInfo.g_WorkingSetSize">
+	<summary>
+ 워킹셋 크기를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.MemoryUsageInfo.g_PageFileUsage">
+	<summary>
+ 페이지 파일의 사용량을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.MemoryUsageInfo.g_PrivateUsage">
+	<summary>
+ 개인 작업 메모리 사용량을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.MemoryUsageInfo.g_CurrentNonPagedPoolUsage">
+	<summary>
+ 페이징되지 않은 풀의 사용량을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.MemoryUsageInfo.g_CurrentPagedPoolUsage">
+	<summary>
+ 페이징된 풀의 사용량을 저장하는 변수입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.MemoryUsageInfo">
+	<summary>
+ 프로세스의 메모리 정보를 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.PriorityInfo.g_PriorityClass">
+	<summary>
+ 우선 순위를 저장하는 변수입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.PriorityInfo">
+	<summary>
+ 프로세스의 우선 순위 정보를 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.StringInfo.g_Path">
+	<summary>
+ 이미지 파일의 경로를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.StringInfo.g_CommandLine">
+	<summary>
+ 명령줄 인수를 저장하는 변수입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.StringInfo">
+	<summary>
+ 프로세스의 이미지 파일 경로 및 명령줄 인수에 대한 정보를 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo.g_Name">
+	<summary>
+ 특권의 이름을 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo.g_State">
+	<summary>
+ 특권의 상태를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo.g_Index">
+	<summary>
+ 특권의 번호를 저장하는 변수입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo">
+	<summary>
+ 특권의 정보를 포함하는 클래스입니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.PrivilegeList">
+	<summary>
+ 프로세스의 특권 목록을 저장합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo.#ctor(AdvSystem.ReferenceCore.Structure.LuidAndAttributes)">
+	<summary>
+ 특권의 정보를 저장하는 PrivilegeInfo 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="LuidAttr">특권에 대한 정보를 저장하고 있는 LuidAndAttributes 구조체 변수를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo.Name">
+	<summary>
+ 권한의 이름을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo.State">
+	<summary>
+ 권한의 상태를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.PrivilegeList.PrivilegeInfo.Index">
+	<summary>
+ 권한의 번호를 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.PrivilegeList.#ctor(System.UInt32)">
+	<summary>
+ 지정한 프로세스의 특권 목록을 저장하는 PriorityInfo 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">특권 목록을 가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.PrivilegeList.Privileges">
+	<summary>
+ 권한 목록을 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.PriorityInfo.#ctor(System.UInt32)">
+	<summary>
+ 지정한 프로세스의 우선 순위 정보를 저장하는 PriorityInfo 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">우선 순위 정보를 가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.PriorityInfo.Name">
+	<summary>
+ 우선 순위 상태의 이름을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.PriorityInfo.Value">
+	<summary>
+ 우선 순위 상태의 값을 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.PriorityInfo.ChangePriority(AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass)">
+	<summary>
+ 우선 순위를 변경합니다.
+ </summary>
+	<param name="NewPriority">변경될 우선 순위를 입력합니다.</param>
+</member><member name="P:AdvSystem.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AdvSystem.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:AdvSystem.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetParentProcess(System.UInt32)">
+	<summary>
+ 지정한 프로세스의 부모 프로세스를 가져옵니다.
+ </summary>
+	<param name="ProcessId">부모 프로세스를 찾을 자식 프로세스의 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.IsProcessRunning(System.UInt32)">
+	<summary>
+ 지정한 식별자를 가진 프로세스가 실행 중인지를 확인합니다.
+ </summary>
+	<param name="ProcessId">실행 중인지 확인할 프로세스의 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessPBI(System.IntPtr,System.Object@)">
+	<summary>
+ 프로세스의 정보를 포함하고 있는 ProcessBasicInformation 구조체를 가져옵니다.
+ </summary>
+	<param name="Handle">가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="Pbi">정보가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessPEB(System.IntPtr,System.Object)">
+	<summary>
+ 프로세스의 정보를 포함하고 있는 ProcessEnvironmentBlock(PEB) 구조체를 가져옵니다.
+ </summary>
+	<param name="Handle">가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="Peb">정보가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessParam(System.IntPtr,System.Object@)">
+	<summary>
+ 프로세스의 문자열 정보를 포함하고 있는 RtlUserProcessParameters 구조체를 가져옵니다.
+ </summary>
+	<param name="Handle">가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="RtlUserProcessParam">정보가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessParamString(System.IntPtr,AdvSystem.ReferenceCore.Structure.UnicodeString,System.String@)">
+	<summary>
+ 프로세스의 문자열을 읽어옵니다.
+ </summary>
+	<param name="Handle">문자열을 읽어올 프로세스의 핸들을 입력합니다.</param>
+	<param name="UnicodeStr">문자열이 저장되어있는 UnicodeString 구조체를 입력합니다.</param>
+	<param name="String">문자열이 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessPe32(System.UInt32,System.Object@)">
+	<summary>
+ 프로세스의 정보를 포함하고 있는 ProcessEntry32 구조체를 가져옵니다.
+ </summary>
+	<param name="ProcessId">정보를 가져올 프로세스의 식별자를 입력합니다.</param>
+	<param name="Pe32">정보가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessLdrData(System.IntPtr,System.Object@)">
+	<summary>
+ 프로세스의 모듈 목록에 대한 정보를 포함하고 있는 PebLdrData 구조체를 가져옵니다.
+ </summary>
+	<param name="Handle">가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="LdrData">정보가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessLdrDataTable(System.IntPtr,System.IntPtr,System.Object@)">
+	<summary>
+ 프로세스의 모듈에 대한 정보를 포함하고 있는 LdrModule 구조체를 가져옵니다.
+ </summary>
+	<param name="Handle">가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="LdmAddress">모듈에 대한 정보가 있는 주소를 입력합니다.</param>
+	<param name="Ldm">정보가 저장될 LdrModule 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessDomainUsername(System.Int32)">
+	<summary>
+ 프로세스의 도메인, 이름을 가져옵니다.
+ </summary>
+	<param name="ProcessId">가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.OpenProcessInfo(System.Int32)">
+	<summary>
+ 프로세스의 정보를 얻기 위해서 프로세스를 엽니다. (QueryInformation 과 VmRead 를 사용함)
+ </summary>
+	<param name="ProcessId">핸들을 열 프로세스의 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessName(System.UInt32)">
+	<summary>
+ 프로세스의 이미지 이름을 가져옵니다.
+ </summary>
+	<param name="ProcessId">이미지 이름을 가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.ReadMemory(System.UInt32,System.IntPtr,System.Byte[]@,System.Int32)">
+	<summary>
+ 프로세스의 특정 메모리 주소에 저장되어 있는 데이터를 읽어옵니다.
+ </summary>
+	<param name="ProcessId">데이터를 읽어올 프로세스의 식별자를 입력합니다.</param>
+	<param name="BaseAddress">데이터가 저장되있는 메모리의 시작 주소를 입력합니다.</param>
+	<param name="Size">읽어올 데이터의 크기를 입력합니다.</param>
+	<param name="Data">읽어올 데이터가 저장될 바이트 배열 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.WriteMemory(System.UInt32,System.IntPtr,System.Byte[],System.Int32)">
+	<summary>
+ 프로세스의 특정 메모리 주소에 데이터를 씁니다.
+ </summary>
+	<param name="ProcessId">데이터를 쓸 프로세스의 식별자를 입력합니다.</param>
+	<param name="BaseAddress">데이터가 쓰여질 메모리의 시작 주소를 입력합니다.</param>
+	<param name="Data">쓸 데이터를 입력합니다.</param>
+	<param name="Size">쓸 데이터의 크기를 입력합니다.</param>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcessCount">
+	<summary>
+ 실행 중인 프로세스의 수를 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.GetProcesses">
+	<summary>
+ 현재 컴퓨터에서 실행 중인 프로세스의 목록을 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process">
+	<summary>
+ 프로세스를 관리 및 제어하는 작업을 구현합니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Thread">
+	<summary>
+ 쓰레드를 관리 및 제어하는 작업을 구현하고, 쓰레드의 정보를 저장합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.StringInfo.#ctor(System.UInt32)">
+	<summary>
+ 지정한 프로세스의 문자열 정보를 저장하는 StringInfo 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">문자열 정보를 가져올 프로세스의 식별자를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.StringInfo.Path">
+	<summary>
+ 실행 파일의 경로를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.StringInfo.CommandLine">
+	<summary>
+ 명령줄 인수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.LibraryInformation.BuildOption">
+	<summary>
+ 라이브러리 생성 옵션을 표시합니다.
+ </summary>
+</member><member name="F:AdvSystem.LibraryInformation.Compatibility">
+	<summary>
+ 호환성 정보를 표시합니다.
+ </summary>
+</member><member name="F:AdvSystem.LibraryInformation.Author">
+	<summary>
+ 라이브러리의 개발자를 표시합니다.
+ </summary>
+</member><member name="F:AdvSystem.LibraryInformation.Contact">
+	<summary>
+ 개발자의 연락처 주소(E-Mail)를 표시합니다.
+ </summary>
+</member><member name="F:AdvSystem.LibraryInformation.Version">
+	<summary>
+ 라이브러리의 버전을 표시합니다.
+ </summary>
+</member><member name="T:AdvSystem.LibraryInformation">
+	<summary>
+ 라이브러리의 정보를 포함하고 있습니다.
+ </summary>
+</member><member name="M:AdvSystem.ReferenceCore.Api.LookupPrivilegeValue(System.String,System.String,AdvSystem.ReferenceCore.Structure.LUID@)">
+	<summary>
+ 지정된 시스템의 LUID(Local User Identifier)를 가져옵니다.
+ </summary>
+	<param name="SystemName">검색할 시스템의 이름을 입력합니다.</param>
+	<param name="Name">권한의 이름을 입력합니다.</param>
+	<param name="Luid">로컬 유저 식별자(LUID)가 저장될 LUID 구조체를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.AdjustTokenPrivileges(System.IntPtr,System.Int32,AdvSystem.ReferenceCore.Structure.TokenPrivileges@,System.Int32,AdvSystem.ReferenceCore.Structure.TokenPrivileges@,System.Int32@)">
+	<summary>
+ 특정한 토큰의 권한을 활성화하거나 비활성화합니다.
+ </summary>
+	<param name="TokenHandle">권한을 변경할 토큰의 핸들을 입력합니다.</param>
+	<param name="DisableAllPrivileges">모든 권한을 비활성화할 것인지 여부를 입력합니다.</param>
+	<param name="NewState">변경될 상태를 저장하고 있는 TokenPrivileges 구조체를 입력합니다.</param>
+	<param name="BufferLength">PreviousState 매개 변수에 값이 지정된 경우, 매개 변수의 길이를 입력하고 PreviousState 매개 변수가 NULL(Nothing)일 경우 0을 입력합니다.</param>
+	<param name="PreviousState">토큰의 이전 상태를 저장하고 있는 TokenPrivileges 구조체를 입력합니다.</param>
+	<param name="ReturnLength">얼마만큼의 크기가 필요한지 저장할 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetTokenInformation(System.IntPtr,System.Int32,System.IntPtr,System.Int32,System.Int32@)">
+	<summary>
+ 토큰의 정보를 얻어옵니다.
+ </summary>
+	<param name="TokenHandle">정보를 얻어올 토큰의 정보를 입력합니다.</param>
+	<param name="TokenInformationClass">어떤 정보를 가져올 것인지를 입력합니다.</param>
+	<param name="TokenInformation">토큰의 정보가 저장될 구조체 혹은 포인터 식을 입력합니다.</param>
+	<param name="TokenInformationLength">토큰의 정보가 저장될 구조체 혹은 포인터 식이 저장될 변수에 필요한 크기를 입력합니다.</param>
+	<param name="ReturnLength">얼마만큼의 크기가 필요한지 저장할 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.LookupPrivilegeName(System.String,AdvSystem.ReferenceCore.Structure.LUID@,System.String,System.Int32@)">
+	<summary>
+ 지정한 시스템의 LUID(Local User Identifier)를 이용하여 권한 이름을 가져옵니다.
+ </summary>
+	<param name="SystemName">검색할 시스템의 이름을 입력합니다.</param>
+	<param name="Luid">권한 정보가 저장되있는 로컬 유저 식별자(LUID)를 입력합니다.</param>
+	<param name="Name">권한 이름이 저장될 변수를 입력합니다.</param>
+	<param name="NameLen">권한 이름을 찾은 경우, 권한 이름에 해당하는 길이가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetThreadContext(System.IntPtr,System.IntPtr)">
+	<summary>
+ 쓰레드의 컨텍스트 정보를 가져옵니다.
+ </summary>
+	<param name="Thread">컨텍스트 정보를 가져올 쓰레드의 핸들을 입력합니다.</param>
+	<param name="Context">컨텍스트 정보를 저장할 포인터를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.SetThreadContext(System.IntPtr,System.IntPtr)">
+	<summary>
+ 쓰레드의 컨텍스트 정보를 설정합니다.
+ </summary>
+	<param name="Thread"></param>
+	<param name="Context"></param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.SuspendThread(System.IntPtr)">
+	<summary>
+ 쓰레드의 작업을 정지합니다.
+ </summary>
+	<param name="Thread">작업을 정지할 쓰레드의 핸들을 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.ResumeThread(System.IntPtr)">
+	<summary>
+ 쓰레드의 작업을 재개합니다.
+ </summary>
+	<param name="Thread">작업이 정지된 쓰레드의 핸들을 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.TerminateThread(System.IntPtr,System.Int32)">
+	<summary>
+ 쓰레드를 종료합니다.
+ </summary>
+	<param name="Thread">종료할 쓰레드의 핸들을 입력합니다.</param>
+	<param name="ExitCode">쓰레드가 종료된 이유를 설정합니다. 대부분의 경우 이 옵션을 0으로 설정합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.OpenThread(AdvSystem.ReferenceCore.Enumeration.ThreadAccess,System.Boolean,System.UInt32)">
+	<summary>
+ 쓰레드의 핸들을 엽니다.
+ </summary>
+	<param name="Access">쓰레드 핸들에 대한 접근 권한을 설정합니다.</param>
+	<param name="Inherit">핸들을 상속할 것인지 결정합니다. 대부분의 경우 이 옵션을 FALSE로 설정합니다.</param>
+	<param name="ThreadId">핸들을 가져올 쓰레드의 대상 식별자(TID)를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.Thread32First(System.IntPtr,AdvSystem.ReferenceCore.Structure.ThreadEntry32@)">
+	<summary>
+ 스냅샷의 첫번째 쓰레드 정보를 가져옵니다.
+ </summary>
+	<param name="Snapshot">쓰레드 정보를 가져올 대상 스냅샷을 입력합니다.</param>
+	<param name="TE32">쓰레드 정보가 저장될 ThreadEntry32 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.Thread32Next(System.IntPtr,AdvSystem.ReferenceCore.Structure.ThreadEntry32@)">
+	<summary>
+ 스냅샷에 기록된 다음 쓰레드의 정보를 가져옵니다.
+ </summary>
+	<param name="Snapshot">쓰레드 정보를 가져올 대상 스냅샷을 입력합니다.</param>
+	<param name="TE32">쓰레드 정보가 저장될 ThreadEntry32 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.CreateProcess(System.String,System.String,System.IntPtr,System.IntPtr,System.Boolean,System.UInt32,System.IntPtr,System.String,System.IntPtr,System.IntPtr)">
+	<summary>
+ 프로세스를 생성합니다.
+ </summary>
+	<param name="ApplicationName">실행될 파일의 이름을 포함한 경로를 입력합니다.</param>
+	<param name="CommandLine">명령줄 인수를 입력합니다.</param>
+	<param name="ProcessAttributes"></param>
+	<param name="ThreadAttributes"></param>
+	<param name="InheritHandles">생성되는 프로세스가 부모 프로세스의 핸들을 상속받을 것인지 결정합니다.</param>
+	<param name="CreationFlags">생성 옵션을 결정합니다. 이 값을 이용해서 우선 순위를 결정할 수도 있습니다.</param>
+	<param name="Environment">환경 변수를 입력합니다.</param>
+	<param name="CurrentDirectory">생성될 프로세스의 현재 경로를 입력합니다.</param>
+	<param name="StartupInfo">생성 옵션을 결정하는 StartupInfo 구조체의 포인터 식을 입력합니다.</param>
+	<param name="ProcessInformation">생성된 프로세스의 정보를 담고있는 ProcessInformation 구조체가 저장될 변수의 포인터 식을 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessHandleCount(System.IntPtr,System.UInt32@)">
+	<summary>
+ 프로세스의 핸들 갯수를 가져옵니다.
+ </summary>
+	<param name="Process">핸들 갯수를 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="HandleCount">핸들 갯수가 저장될 부호없는 4바이트 정수 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetNativeSystemInfo(AdvSystem.ReferenceCore.Structure.SystemInfo@)">
+	<summary>
+ 네이티브 시스템의 정보를 가져옵니다.
+ </summary>
+	<param name="SystemInfo">시스템 정보가 저장될 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.IsWow64Process(System.IntPtr,System.Boolean@)">
+	<summary>
+ 프로세스가 64비트 프로세스인지 확인합니다.
+ </summary>
+	<param name="Process">확인할 프로세스의 핸들을 입력합니다.</param>
+	<param name="Is64BitProcess">프로세스가 64비트인지 판별 여부가 저장될 변수를 입력합니다. (64비트인 경우 TRUE, 그 외의 경우 FALSE 입니다)</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetSystemDirectory(System.Text.StringBuilder,System.Int32)">
+	<summary>
+ 시스템 폴더의 경로를 가져옵니다.
+ </summary>
+	<param name="Buffer">시스템 경로가 저장될 문자열 변수를 입력합니다.</param>
+	<param name="Size">문자열 변수의 길이를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetWindowsDirectory(System.Text.StringBuilder,System.Int32)">
+	<summary>
+ 시스템 폴더의 경로를 가져옵니다.
+ </summary>
+	<param name="Buffer">시스템 경로가 저장될 문자열 변수를 입력합니다.</param>
+	<param name="Size">문자열 변수의 길이를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.CreateToolhelp32Snapshot(AdvSystem.ReferenceCore.Enumeration.SnapshotFlags,System.Int32)">
+	<summary>
+ 프로세스의 특정 정보를 포함하고 있는 스냅샷을 생성합니다.
+ </summary>
+	<param name="Flags">어떤 정보를 포함한 스냅샷을 생성할 것인지에 대한 옵션을 설정합니다.</param>
+	<param name="ProcessId">정보를 가져올 프로세스의 식별자를 입력합니다. (쓰레드나 프로세스의 정보를 가져오는 경우에는 해당되지 않음)</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.CloseHandle(System.IntPtr)">
+	<summary>
+ 열려진 핸들을 닫습니다.
+ </summary>
+	<param name="Handle">닫을 핸들을 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.OpenProcess(AdvSystem.ReferenceCore.Enumeration.ProcessAccess,System.Boolean,System.UInt32)">
+	<summary>
+ 프로세스의 핸들을 엽니다.
+ </summary>
+	<param name="Access">프로세스 핸들에 대한 접근 권한을 설정합니다.</param>
+	<param name="Inherit">핸들을 상속할 것인지 결정합니다. 대부분의 경우 이 옵션을 FALSE로 설정합니다.</param>
+	<param name="ProcessId">핸들을 가져올 프로세스의 대상 식별자(PID)를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.TerminateProcess(System.IntPtr,System.Int32)">
+	<summary>
+ 프로세스를 종료합니다.
+ </summary>
+	<param name="Process">종료할 프로세스의 핸들을 입력합니다.</param>
+	<param name="ExitCode">프로세스가 종료된 이유를 설정합니다. 대부분의 경우 이 옵션을 0으로 설정합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.Process32First(System.IntPtr,AdvSystem.ReferenceCore.Structure.ProcessEntry32@)">
+	<summary>
+ 스냅샷의 첫번째 프로세스 정보를 가져옵니다.
+ </summary>
+	<param name="Snapshot">프로세스 정보를 가져올 대상 스냅샷을 입력합니다.</param>
+	<param name="PE32">프로세스 정보가 저장될 ProcessEntry32 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.Process32Next(System.IntPtr,AdvSystem.ReferenceCore.Structure.ProcessEntry32@)">
+	<summary>
+ 스냅샷에 기록된 다음 프로세스의 정보를 가져옵니다.
+ </summary>
+	<param name="Snapshot">프로세스 정보를 가져올 대상 스냅샷을 입력합니다.</param>
+	<param name="PE32">프로세스 정보가 저장될 ProcessEntry32 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetPriorityClass(System.IntPtr)">
+	<summary>
+ 프로세스의 우선 순위를 가져옵니다.
+ </summary>
+	<param name="Process">우선 순위를 가져올 프로세스의 핸들을 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessAffinityMask(System.IntPtr,System.Int32@,System.Int32@)">
+	<summary>
+ 프로세스의 CPU 선호도를 가져옵니다.
+ </summary>
+	<param name="Process">CPU 선호도를 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="ProcessAffinityMask">지정된 프로세스의 CPU 선호도가 저장될 변수를 입력합니다.</param>
+	<param name="SystemProcessAffinityMask">시스템의 CPU 선호도가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessIoCounters(System.IntPtr,AdvSystem.ReferenceCore.Structure.IoCounters@)">
+	<summary>
+ 프로세스의 입출력(I/O) 정보를 가져옵니다.
+ </summary>
+	<param name="Process">입출력(I/O) 정보를 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="IOC">프로세스의 입출력(I/O) 정보가 저장될 IoCounters 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.SetPriorityClass(System.IntPtr,AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass)">
+	<summary>
+ 프로세스의 우선 순위를 설정합니다.
+ </summary>
+	<param name="Process">우선 순위를 설정할 프로세스의 핸들을 입력합니다.</param>
+	<param name="PriorityClass">우선 순위를 입력합니다. 자세한 항목은 ProcessPriorityClass 열거형을 참고하세요.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.SetProcessAffinityMask(System.IntPtr,System.Int32@)">
+	<summary>
+ 프로세스의 CPU 선호도를 설정합니다.
+ </summary>
+	<param name="Process">CPU 선호도를 설정할 프로세스의 핸들을 입력합니다.</param>
+	<param name="ProcessAffinityMask">CPU 선호도를 비트 마스크로 표현한 값이 저장된 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.SetProcessPriorityBoost(System.IntPtr,System.Int32)">
+	<summary>
+ 프로세스의 우선 순위 제어 상태를 설정합니다.
+ </summary>
+	<param name="Process">우선 순위 제어 상태를 설정할 프로세스의 핸들을 입력합니다.</param>
+	<param name="DisablePriorityBoost">동적 부스트를 비활성화하려면 TRUE를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.SetProcessWorkingSetSize(System.IntPtr,System.Int32,System.Int32)">
+	<summary>
+ 프로세스의 워킹셋 크기를 설정합니다.
+ </summary>
+	<param name="Process">워킹셋 크기를 설정할 프로세스의 핸들을 입력합니다.</param>
+	<param name="MinWorkingSetSize">최소 워킹셋 크기를 입력합니다.</param>
+	<param name="MaxWorkingSetSize">최대 워킹셋 크기를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessPriorityBoost(System.IntPtr,System.Int32@)">
+	<summary>
+ 프로세스의 우선 순위 제어 상태를 가져옵니다.
+ </summary>
+	<param name="Process">우선 순위 제어 상태를 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="Disable">우선 순위 제어 상태가 저장될 변수를 입력합니다. 이 값이 TRUE일 경우 동적 부스트가 비활성화된 것이고, FALSE일 경우 정상적인 상태를 나타냅니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessVersion(System.Int32)">
+	<summary>
+ 프로세스의 버전을 가져옵니다.
+ </summary>
+	<param name="ProcessId">버전을 가져올 프로세스의 식별자(PID)를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessTimes(System.IntPtr,AdvSystem.ReferenceCore.Structure.FileTime@,AdvSystem.ReferenceCore.Structure.FileTime@,AdvSystem.ReferenceCore.Structure.FileTime@,AdvSystem.ReferenceCore.Structure.FileTime@)">
+	<summary>
+ 프로세스의 시간 정보를 가져옵니다.
+ </summary>
+	<param name="Process">시간 정보를 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="CreationTime">프로세스의 생성 시간 정보가 저장될 FileTime 구조체 변수를 입력합니다.</param>
+	<param name="ExitTime">프로세스의 종료 시간 정보가 저장될 FileTime 구조체 변수를 입력합니다.</param>
+	<param name="KernelTime">프로세스의 커널 시간 정보가 저장될 FileTime 구조체 변수를 입력합니다.</param>
+	<param name="UserTime">프로세스의 유저 시간 정보가 저장될 FileTime 구조체 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.HeapAlloc(System.IntPtr,System.Int32,System.Int32)">
+	<summary>
+ 프로세스의 메모리를 할당합니다.
+ </summary>
+	<param name="Heap">메모리를 할당할 힙의 핸들을 입력합니다.</param>
+	<param name="Flags">메모리를 할당하는 옵션을 설정합니다.</param>
+	<param name="Size">할당할 메모리의 크기를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessHeap">
+	<summary>
+ 프로세스의 힙을 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.ReferenceCore.Api.WriteProcessMemory(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.Int32@)">
+	<summary>
+ 지정한 프로세스의 메모리에 데이터를 씁니다.
+ </summary>
+	<param name="Process">메모리에 데이터를 쓸 프로세스의 핸들을 입력합니다.</param>
+	<param name="BaseAddress">메모리에 쓸 시작 주소를 입력합니다.</param>
+	<param name="Buffer">쓸 데이터가 저장될 변수를 입력합니다.</param>
+	<param name="Size">쓸 데이터의 크기를 입력합니다.</param>
+	<param name="BytesRead">쓰여진 데이터의 크기가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.ReadProcessMemory(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.Int32@)">
+	<summary>
+ 지정한 프로세스의 메모리를 읽어옵니다.
+ </summary>
+	<param name="Process">메모리를 읽어올 프로세스의 핸들을 입력합니다.</param>
+	<param name="BaseAddress">메모리를 읽어올 시작 주소를 입력합니다.</param>
+	<param name="Buffer">읽어올 데이터가 저장될 변수를 입력합니다.</param>
+	<param name="Size">읽어올 데이터의 크기를 입력합니다.</param>
+	<param name="BytesRead">읽혀진 데이터의 크기가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.OpenProcessToken(System.IntPtr,System.Int32,System.IntPtr@)">
+	<summary>
+ 프로세스의 토큰을 엽니다.
+ </summary>
+	<param name="Process">토큰을 열 프로세스의 핸들을 입력합니다.</param>
+	<param name="DesiredAccess">토큰을 어떤 권한으로 열 것인지 입력합니다.</param>
+	<param name="Token">토큰의 핸들이 저장될 포인터 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.DebugActiveProcess(System.UInt32)">
+	<summary>
+ 프로세스에 디버거를 부착합니다.
+ </summary>
+	<param name="ProcessId">디버거를 부착할 프로세스의 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.DebugActiveProcessStop(System.UInt32)">
+	<summary>
+ 프로세스에 부착된 디버거를 제거합니다.
+ </summary>
+	<param name="ProcessId">디버거를 제거할 프로세스의 식별자를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessImageFileName(System.IntPtr,System.String@,System.Int32)">
+	<summary>
+ 프로세스의 이미지 이름을 가져옵니다.
+ </summary>
+	<param name="Process">이미지 이름을 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="Buffer">이미지 이름이 저장될 문자열 변수를 입력합니다.</param>
+	<param name="BufferLength">문자열 변수의 길이를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.EnumProcesses(System.UInt32[],System.Int32,System.Int32@)">
+	<summary>
+ 프로세스 목록을 가져옵니다.
+ </summary>
+	<param name="Processes">프로세스 목록이 저장될 배열 변수를 입력합니다.</param>
+	<param name="SizeOfArray">배열 변수의 길이를 입력합니다.</param>
+	<param name="RequiredLength">필요한 배열 변수의 길이가 저장될 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetProcessMemoryInfo(System.IntPtr,AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx@,System.Int32)">
+	<summary>
+ 프로세스의 메모리 사용량을 가져옵니다.
+ </summary>
+	<param name="Process">메모리 사용량을 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="PMCEX">프로세스의 메모리 사용량 정보가 저장될 구조체 변수를 입력합니다.</param>
+	<param name="Size">ProcessMemoryCountersEx 구조체의 크기를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetPerformanceInfo(AdvSystem.ReferenceCore.Structure.PerformanceInformation@,System.UInt32)">
+	<summary>
+ 성능 정보를 가져옵니다.
+ </summary>
+	<param name="PerformanceInformation">성능 정보가 저장될 PerformanceInfo 구조체를 입력합니다.</param>
+	<param name="Size">PerformanceInfo 구조체의 크기를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.NtQueryInformationProcess(System.IntPtr,AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass,System.IntPtr,System.Int32,System.Int32@)">
+	<summary>
+ 프로세스의 정보를 가져옵니다.
+ </summary>
+	<param name="Process">정보를 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="ProcessInformationClass">어떤 정보를 가져올 것인지를 결정합니다.</param>
+	<param name="ProcessInformation">프로세스의 정보가 저장될 구조체의 주소값이 저장될 포인터 변수를 입력합니다.</param>
+	<param name="ProcessInformationLength">구조체의 크기를 입력합니다.</param>
+	<param name="ReturnLength">쓰여진 데이터의 크기가 저장될 정수형 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetTokenInformation(System.IntPtr,AdvSystem.ReferenceCore.Enumeration.TokenInformationClass,System.IntPtr,System.Int32,System.Int32@)">
+	<summary>
+ 토큰의 정보를 가져옵니다.
+ </summary>
+	<param name="Token">정보를 가져올 토큰의 핸들을 입력합니다.</param>
+	<param name="TokenInformationClass">어떤 정보를 가져올 것인지를 결정합니다.</param>
+	<param name="TokenInformation">토큰의 정보가 저장될 구조체의 주소값이 저장될 포인터 변수를 입력합니다.</param>
+	<param name="TokenInformationLength">구조체의 크기를 입력합니다.</param>
+	<param name="ReturnLength">쓰여진 데이터의 크기가 저장될 정수형 변수를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.LookupAccountSid(System.String,System.IntPtr,System.Text.StringBuilder,System.UInt32@,System.Text.StringBuilder,System.UInt32@,System.Int32@)">
+	<summary>
+ 지정한 사용자 계정의 보안 식별자(SID)를 검색합니다.
+ </summary>
+	<param name="SystemName">시스템 이름을 입력합니다.</param>
+	<param name="Sid">Sid 구조체를 입력합니다.</param>
+	<param name="AccountName">사용자 계정의 이름이 저장될 변수를 입력합니다.</param>
+	<param name="AccountNameLength">사용자 계정의 이름이 저장될 변수의 길이를 입력합니다.</param>
+	<param name="DomainName">도메인 이름이 저장될 변수를 입력합니다.</param>
+	<param name="DomainNameLength">도메인 이름이 저장될 변수의 길이를 입력합니다.</param>
+	<param name="use">SidNameUse 구조체를 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.GetGuiResources(System.IntPtr,AdvSystem.ReferenceCore.Enumeration.ObjectFlags)">
+	<summary>
+ 프로세스의 GDI 혹은 USER 개체의 수를 가져옵니다.
+ </summary>
+	<param name="Process">개체의 수를 가져올 프로세스의 핸들을 입력합니다.</param>
+	<param name="Flags">어떤 개체를 가져올 것인지 입력합니다.</param>
+</member><member name="M:AdvSystem.ReferenceCore.Api.SHGetFileInfo(System.String,System.Int32,System.IntPtr,System.Int32,System.Int32)">
+	<summary>
+ 파일의 정보를 가져옵니다.
+ </summary>
+	<param name="Path">파일의 경로를 입력합니다.</param>
+	<param name="FileAttributes">파일의 특성을 입력합니다.</param>
+	<param name="FileInfo">파일 정보가 저장될 SHFileInfo 구조체의 포인터를 입력합니다.</param>
+	<param name="SizeFileInfo">SHFileInfo 구조체의 크기를 입력합니다.</param>
+	<param name="Flags">어떤 정보를 가져올 것인지를 결정하는 옵션 값을 입력합니다.</param>
+</member><member name="T:AdvSystem.ReferenceCore.Api">
+	<summary>
+ 라이브러리에서 사용되는 API들을 모아놓은 클래스입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.TokenPrivileges.PrivilegeCount">
+	<summary>
+ 특권의 갯수를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.TokenPrivileges.Luid">
+	<summary>
+ 로컬 유저 식별자를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.TokenPrivileges.Attributes">
+	<summary>
+ 권한 활성화 여부를 나타냅니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.TokenPrivileges.Size">
+	<summary>
+ TokenPrivileges 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.TokenPrivileges">
+	<summary>
+ 토큰의 특권에 대한 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LUID.LowPart">
+	<summary>
+ 하위 4바이트를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LUID.HighPart">
+	<summary>
+ 상위 4바이트를 나타냅니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.LUID.Size">
+	<summary>
+ LUID 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.LUID">
+	<summary>
+ 로컬 유저 식별자에 대한 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LuidAndAttributes.Luid">
+	<summary>
+ 로컬 유저 식별자를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LuidAndAttributes.Attributes">
+	<summary>
+ 속성을 나타냅니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.LuidAndAttributes.Size">
+	<summary>
+ LuidAndAttributes 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.LuidAndAttributes">
+	<summary>
+ 로컬 유저 식별자 및 속성을 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.cb">
+	<summary>
+ StartupInfo 구조체의 크기를 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.Reserved">
+	<summary>
+ 사용되지 않는 필드
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.Desktop">
+	<summary>
+ -
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.Title">
+	<summary>
+ -
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.X">
+	<summary>
+ X 좌표를 결정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.Y">
+	<summary>
+ Y 좌표를 결정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.XSize">
+	<summary>
+ 윈도우 창의 넓이를 결정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.YSize">
+	<summary>
+ 윈도우 창의 높이를 결정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.XCountChars">
+	<summary>
+ -
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.YCountChars">
+	<summary>
+ -
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.FillAttributes">
+	<summary>
+ -
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.Flags">
+	<summary>
+ -
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.ShowWindow">
+	<summary>
+ 윈도우 창을 표시하는 방법을 결정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.Reserved2">
+	<summary>
+ 사용되지 않는 필드
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.Reserved3">
+	<summary>
+ 사용되지 않는 필드
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.StdInput">
+	<summary>
+ 콘솔 입력에 대한 핸들을 결정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.StdOutput">
+	<summary>
+ 콘솔 출력에 대한 핸들을 결정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.StartupInfo.StdError">
+	<summary>
+ 콘솔 오류에 대한 핸들을 결정합니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.StartupInfo.Size">
+	<summary>
+ StartupInfo 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.StartupInfo">
+	<summary>
+ 프로세스의 시작 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessInformation.Process">
+	<summary>
+ 프로세스의 핸들을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessInformation.Thread">
+	<summary>
+ 쓰레드의 핸들을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessInformation.Id">
+	<summary>
+ 식별자를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessInformation.ThreadId">
+	<summary>
+ 쓰레드 식별자를 나타냅니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ProcessInformation.Size">
+	<summary>
+ ProcessInformation 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ProcessInformation">
+	<summary>
+ 프로세스의 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessStartOption.Directory">
+	<summary>
+ 프로세스의 시작 폴더를 설정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessStartOption.ApplicationPath">
+	<summary>
+ 실행할 프로세스의 파일 경로를 설정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessStartOption.CommandLine">
+	<summary>
+ 명령줄 인수를 설정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessStartOption.Flags">
+	<summary>
+ 생성 옵션을 설정합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessStartOption.StartupInfo">
+	<summary>
+ StartupInfo 구조체의 포인터 식을 설정합니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ProcessStartOption.Size">
+	<summary>
+ ProcessStartOption 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ProcessStartOption">
+	<summary>
+ 프로세스 생성 옵션에 관한 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.SHFileInfo.Size">
+	<summary>
+ SHFileInfo 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.SHFileInfo">
+	<summary>
+ 파일의 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.wProcessorArchitecture">
+	<summary>
+ 프로세서의 아키텍쳐를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.wReserved">
+	<summary>
+ 사용되지 않는 필드입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.dwPageSize">
+	<summary>
+ 커밋된 페이지의 크기를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.lpMinimumApplicationAddress">
+	<summary>
+ 프로그램이 접근할 수 있는 가장 낮은 메모리 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.lpMaximumApplicationAddress">
+	<summary>
+ 프로그램이 접근할 수 있는 가장 높은 메모리 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.dwActiveProcessorMask">
+	<summary>
+ CPU 선호도를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.dwNumberOfProcessors">
+	<summary>
+ 프로세서의 수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.dwProcessorType">
+	<summary>
+ 프로세서의 종류을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.dwAllocationGranularity">
+	<summary>
+ 가상 메모리가 할당될 수 있는 시작 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.wProcessorLevel">
+	<summary>
+ 사용되지 않는 필드입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SystemInfo.wProcessorRevision">
+	<summary>
+ 프로세서의 Revision 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.SystemInfo.Size">
+	<summary>
+ SystemInfo 구조체의 크기를 가져옵니다.
+ </summary>
+	<value></value>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.SystemInfo">
+	<summary>
+ 시스템 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.cb">
+	<summary>
+ PerformanceInformation 구조체의 크기를 저장합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.CommitTotal">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.CommitLimit">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.CommitPeak">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.PhysicalTotal">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.PhysicalAvailable">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.SystemCache">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.KernelTotal">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.KernelPaged">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.KernelNonpaged">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.PageSize">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.HandleCount">
+	<summary>
+	</summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.ProcessCount">
+	<summary>
+ 실행 중인 프로세스의 수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PerformanceInformation.ThreadCount">
+	<summary>
+	</summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.PerformanceInformation.Size">
+	<summary>
+ PerformanceInformation 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.PerformanceInformation">
+	<summary>
+ 성능 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.TokenUser.User">
+	<summary>
+ 유저의 식별자가 저장된 SidAndAttributes 구조체를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.TokenUser">
+	<summary>
+ 토큰에 접근하기 위한 유저의 식별자를 나타내는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SidAndAttributes.Sid">
+	<summary>
+ Sid 구조체가 저장된 메모리 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.SidAndAttributes.Attributes">
+	<summary>
+ 보안 식별자의 특성을 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.SidAndAttributes">
+	<summary>
+ 보안 식별자(SID)와 SID의 특성을 저장하는 구조체입니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.Sid">
+	<summary>
+ 보안 식별자의 정보를 저장하는 구조채입니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.SidIdentifierAuthority">
+	<summary>
+ 보안 식별자의 권한 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.FileTime.dwHighDateTime">
+	<summary>
+ 시간의 상위 비트를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.FileTime.dwLowDateTime">
+	<summary>
+ 시간의 하위 비트를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.FileTime.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.FileTime">
+	<summary>
+ 시간 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.cb">
+	<summary>
+ ProcessMemoryCountersEx 구조체의 크기를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.PageFaultCount">
+	<summary>
+ 페이지 폴트의 갯수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.PeakWorkingSetSize">
+	<summary>
+ 워킹셋의 최대 크기를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.WorkingSetSize">
+	<summary>
+ 현재 워킹셋의 크기를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.QuotaPeakPagedPoolUsage">
+	<summary>
+ 페이징된 풀의 최대 사용량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.QuotaPagedPoolUsage">
+	<summary>
+ 현재 페이징된 풀의 사용량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.QuotaPeakNonPagedPoolUsage">
+	<summary>
+ 페이징되지 않은 풀의 최대 사용량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.QuotaNonPagedPoolUsage">
+	<summary>
+ 현재 페이징되지 않은 풀의 사용량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.PagefileUsage">
+	<summary>
+ 페이지 파일의 사용량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.PeakPagefileUsage">
+	<summary>
+ 페이지 파일의 최대 사용량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.PrivateUsage">
+	<summary>
+ 개인 메모리 사용량을 가져옵니다. PagefileUsage 와 같음
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ProcessMemoryCountersEx">
+	<summary>
+ 프로세스의 메모리 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.IoCounters.ReadOperationCount">
+	<summary>
+ 읽기 작업이 수행된 양을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.IoCounters.WriteOperationCount">
+	<summary>
+ 쓰기 작업이 수행된 양을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.IoCounters.OtherOperationCount">
+	<summary>
+ 읽기 및 쓰기 작업 외의 I/O 작업이 수행된 양을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.IoCounters.ReadTransferCount">
+	<summary>
+ 읽은 데이터의 양을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.IoCounters.WriteTransferCount">
+	<summary>
+ 쓴 데이터의 양을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.IoCounters.OtherTransferCount">
+	<summary>
+ 읽기 및 쓰기 작업 외에 전송된 데이터의 양을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.IoCounters.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.IoCounters">
+	<summary>
+ 프로세스의 입출력(I/O) 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.dwSize">
+	<summary>
+ ProcessEntry32 구조체의 크기를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.cntUsage">
+	<summary>
+ 사용량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.th32ProcessID">
+	<summary>
+ 프로세스 식별자(PID)를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.th32DefaultHeapID">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.th32ModuleID">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.cntThreads">
+	<summary>
+ 쓰레드 개수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.th32ParentProcessID">
+	<summary>
+ 자식 프로세스인 경우, 부모 프로세스의 식별자(PID)를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.pcPriClassBase">
+	<summary>
+ 기본 우선 순위를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.dwFlags">
+	<summary>
+ 프로세스의 옵션을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEntry32.szExeFile">
+	<summary>
+ 프로세스의 이미지 이름을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ProcessEntry32.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ProcessEntry32">
+	<summary>
+ 프로세스의 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation.ExitStatus">
+	<summary>
+ 종료 상태를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation.PebBaseAddress">
+	<summary>
+ PEB 시작 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation.AffinityMask">
+	<summary>
+ CPU 선호도 마스크를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation.BasePriority">
+	<summary>
+ 기본 우선 순위를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation.UniqueProcessId">
+	<summary>
+ 고유 식별자(PID)를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation.InheritedFromUniqueProcessId">
+	<summary>
+ 고유 식별자로부터의 상속 여부를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ProcessBasicInformation">
+	<summary>
+ 프로세스의 기본 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Reserved1">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.BeingDebugged">
+	<summary>
+ 프로세스에 디버거가 설치되었는지 여부를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Reserved2">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Reserved3">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Ldr">
+	<summary>
+ PEB_LDR_DATA 구조체의 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.ProcessParameters">
+	<summary>
+ RTL_USER_PROCESS_PARAMETERS 구조체의 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Reserved4">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Reserved5">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.PostProcessInitRoutine">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Reserved6">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Reserved7">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.SessionId">
+	<summary>
+ 세션 식별자를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ProcessEnvironmentBlock">
+	<summary>
+ 프로세스에 대한 상세 정보들을 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PebLdrData.Length">
+	<summary>
+ 구조체의 길이를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PebLdrData.Initialized">
+	<summary>
+ 초기화 여부를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PebLdrData.SsHandle">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PebLdrData.InLoadOrderModuleList">
+	<summary>
+ 모듈을 불러와진 순서대로 저장해놓은 ListEntry 구조체를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PebLdrData.InMemoryOrderModuleList">
+	<summary>
+ 모듈을 메모리 위치 순서대로 저장해놓은 ListEntry 구조체를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.PebLdrData.InInitializationOrderModuleList">
+	<summary>
+ 모듈을 초기화된 순서대로 저장해놓은 ListEntry 구조체를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.PebLdrData.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.PebLdrData">
+	<summary>
+ 프로세스의 모듈 데이터를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.InLoadOrderModuleList">
+	<summary>
+ 모듈을 불러와진 순서대로 저장해놓은 ListEntry 구조체를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.InMemoryOrderModuleList">
+	<summary>
+ 모듈을 메모리 위치 순서대로 저장해놓은 ListEntry 구조체를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.InInitializationOrderModuleList">
+	<summary>
+ 모듈을 초기화된 순서대로 저장해놓은 ListEntry 구조체를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.DllBase">
+	<summary>
+ 모듈의 시작 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.EntryPoint">
+	<summary>
+ 모듈의 시작점(EntryPoint) 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.SizeOfImage">
+	<summary>
+ 모듈 파일의 크기를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.FullDllName">
+	<summary>
+ 모듈의 전체 경로를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.BaseDllName">
+	<summary>
+ 모듈의 이름을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.Flags">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.LoadCount">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.TlsIndex">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.HashTableEntry">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LdrModule.TimeDateStamp">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.LdrModule.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.LdrModule">
+	<summary>
+ 모듈에 대한 데이터를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LargeInteger.QuadPart">
+	<summary>
+ 8바이트 정수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LargeInteger.LowPart">
+	<summary>
+ 정수의 하위 4바이트를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.LargeInteger.HighPart">
+	<summary>
+ 정수의 상위 4바이트를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.LargeInteger.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.LargeInteger">
+	<summary>
+ 부호있는 8바이트 정수를 표현할 때 사용하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ULargeInteger.QuadPart">
+	<summary>
+ 8바이트 정수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ULargeInteger.LowPart">
+	<summary>
+ 정수의 하위 4바이트를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ULargeInteger.HighPart">
+	<summary>
+ 정수의 상위 4바이트를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ULargeInteger.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ULargeInteger">
+	<summary>
+ 부호없는 8바이트 정수를 표현할 때 사용하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.UnicodeString.Length">
+	<summary>
+ 문자열의 유효 길이를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.UnicodeString.MaximumLength">
+	<summary>
+ 문자열의 최대 길이를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.UnicodeString.Buffer">
+	<summary>
+ 저장된 유니코드 문자열을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.UnicodeString.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.UnicodeString">
+	<summary>
+ 유니코드 문자열을 표현할 때 사용하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ListEntry.FLink">
+	<summary>
+ 다음 ListEntry 구조체의 주소값을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ListEntry.BLink">
+	<summary>
+ 이전 ListEntry 구조체의 주소값을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ListEntry.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ListEntry">
+	<summary>
+ Linked List를 구현하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.dwSize">
+	<summary>
+ ModuleEntry32 구조체의 크기를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.th32ModuleID">
+	<summary>
+ 사용되지 않는 멤버입니다. (이 멤버는 항상 1임)
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.th32ProcessID">
+	<summary>
+ 모듈을 불러온 프로세스의 식별자를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.GlblcntUsage">
+	<summary>
+ 모듈의 로드 카운트를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.ProccntUsage">
+	<summary>
+ GlblcntUsage 멤버와 같음
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.modBaseAddr">
+	<summary>
+ 소유자 프로세스에서의 모듈의 시작 주소를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.modBaseSize">
+	<summary>
+ 모듈의 크기를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.hModule">
+	<summary>
+ 소유자 프로세스에서의 모듈의 핸들을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.szModule">
+	<summary>
+ 모듈의 이름을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ModuleEntry32.szExePath">
+	<summary>
+ 모듈의 경로를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ModuleEntry32.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ModuleEntry32">
+	<summary>
+ 모듈의 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ThreadEntry32.dwSize">
+	<summary>
+ ThreadEntry32 구조체의 크기를 저장하는 변수입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ThreadEntry32.cntUsage">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ThreadEntry32.th32ThreadID">
+	<summary>
+ 쓰레드의 식별자를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ThreadEntry32.th32OwnerProcessID">
+	<summary>
+ 쓰레드가 만들어진 프로세스의 식별자를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ThreadEntry32.tpBasePri">
+	<summary>
+ 커널에서 쓰레드에 할당한 우선 순위를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ThreadEntry32.tpDeltaPri">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.ThreadEntry32.dwFlags">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.ThreadEntry32.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.ThreadEntry32">
+	<summary>
+ 쓰레드의 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.RtlUserProcessParameters.Reserved1">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.RtlUserProcessParameters.Reserved2">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.RtlUserProcessParameters.ImagePathName">
+	<summary>
+ 프로세스의 이미지 파일이 있는 경로를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Structure.RtlUserProcessParameters.CommandLine">
+	<summary>
+ 프로세스의 명령줄 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.ReferenceCore.Structure.RtlUserProcessParameters.Size">
+	<summary>
+ 구조체의 크기를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure.RtlUserProcessParameters">
+	<summary>
+ 프로세스의 경로에 대한 정보를 저장하는 구조체입니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Structure">
+	<summary>
+ 라이브러리에서 사용되는 구조체들을 모아놓은 클래스입니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.Privileges">
+	<summary>
+ 특권의 이름을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.PrivilegeState.Disabled">
+	<summary>
+ 비활성화
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.PrivilegeState.Default">
+	<summary>
+ 기본값
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.PrivilegeState.Enabled">
+	<summary>
+ 활성화
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.PrivilegeState.DefaultEnabled">
+	<summary>
+ 기본값 (활성화)
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.PrivilegeState.Removed">
+	<summary>
+ 제거됨
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.PrivilegeState.UsedForAccess">
+	<summary>
+ 접근을 위해 사용됨
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.PrivilegeState">
+	<summary>
+ 특권 상태를 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ObjectFlags.Gdi">
+	<summary>
+ GDI 개체를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ObjectFlags.User">
+	<summary>
+ USER 개체를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.ObjectFlags">
+	<summary>
+ 프로세스의 개체를 가져올 때 사용하는 값들을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ArchitectureInfo.Unknown">
+	<summary>
+ 알 수 없는 시스템 구성입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ArchitectureInfo.x64">
+	<summary>
+ 64비트로 구성된 시스템입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ArchitectureInfo.x86">
+	<summary>
+ 32비트로 구성된 시스템입니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.ArchitectureInfo">
+	<summary>
+ 시스템의 구성 정보를 열거합니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.HeapFlags">
+	<summary>
+ 힙 할당 옵션을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.SnapshotFlags.HeapList">
+	<summary>
+ 힙 리스트 정보를 포함하고 있는 스냅샷을 생성합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.SnapshotFlags.Process">
+	<summary>
+ 프로세스 정보를 포함하고 있는 스냅샷을 생성합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.SnapshotFlags.Thread">
+	<summary>
+ 쓰레드 정보를 포함하고 있는 스냅샷을 생성합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.SnapshotFlags.Module">
+	<summary>
+ 모듈 정보를 포함하고 있는 스냅샷을 생성합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.SnapshotFlags.Module32">
+	<summary>
+ 32비트 모듈 정보를 포함하고 있는 스냅샷을 생성합니다. (64비트 운영체제에서만 사용)
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.SnapshotFlags.All">
+	<summary>
+ 모든 정보를 포함하고 있는 스냅샷을 생성합니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.SnapshotFlags">
+	<summary>
+ 어떤 정보를 포함하고 있는 스냅샷을 생성할 것인지를 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass.Unknown">
+	<summary>
+ 알 수 없는 우선 순위
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass.Normal">
+	<summary>
+ 보통 우선 순위를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass.Idle">
+	<summary>
+ 낮은 우선 순위를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass.High">
+	<summary>
+ 높은 우선 순위를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass.Realtime">
+	<summary>
+ 실시간 우선 순위를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass.BelowNormal">
+	<summary>
+ 약간 낮은 우선 순위를 나타냅니다. 이 우선 순위는 Normal 보다 낮고, Idle 보다 높습니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass.AboveNormal">
+	<summary>
+ 약간 높은 우선 순위를 나타냅니다. 이 우선 순위는 Normal 보다 높고, High 보다 낮습니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.ProcessPriorityClass">
+	<summary>
+ 프로세스의 우선 순위 값을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU0">
+	<summary>
+ 첫번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU1">
+	<summary>
+ 두번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU2">
+	<summary>
+ 세번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU3">
+	<summary>
+ 네번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU4">
+	<summary>
+ 다섯번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU5">
+	<summary>
+ 여섯번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU6">
+	<summary>
+ 일곱번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU7">
+	<summary>
+ 여덟번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU8">
+	<summary>
+ 아홉번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU9">
+	<summary>
+ 열번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU10">
+	<summary>
+ 열한번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU11">
+	<summary>
+ 열두번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU12">
+	<summary>
+ 열세번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU13">
+	<summary>
+ 열네번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU14">
+	<summary>
+ 열다섯번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.CPU15">
+	<summary>
+ 열여섯번째 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.SingleCore">
+	<summary>
+ 싱글 코어(1) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.DualCore">
+	<summary>
+ 듀얼 코어(2) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.TripleCore">
+	<summary>
+ 트리플 코어(3) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.QuadCore">
+	<summary>
+ 쿼드 코어(4) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.PentaCore">
+	<summary>
+ 펜타 코어(5) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.HexaCore">
+	<summary>
+ 헥사 코어(6) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.OctaCore">
+	<summary>
+ 옥타 코어(8) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.AffinityMask.DodecaCore">
+	<summary>
+ 도데카 코어(12) CPU에서의 모든 CPU를 나타냅니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.AffinityMask">
+	<summary>
+ CPU에 대한 선호도 비트 마스크를 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessBasicInformation">
+	<summary>
+ 기본적인 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessQuotaLimits">
+	<summary>
+ 할당량 제한 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessIoCounters">
+	<summary>
+ 입출력 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessVmCounters">
+	<summary>
+ 가상 메모리 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessTimes">
+	<summary>
+ 시간 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessBasePriority">
+	<summary>
+ 기본 우선 순위를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessRaisePriority">
+	<summary>
+ 상승한 우선 순위를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessDebugPort">
+	<summary>
+ 디버거의 포트를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessExceptionPort">
+	<summary>
+ 예외 포트를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessAccessToken">
+	<summary>
+ 토큰 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessLdtInformation">
+	<summary>
+ 메모리 테이블 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessLdtSize">
+	<summary>
+ 메모리 테이블의 크기를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessDefaultHardErrorMode">
+	<summary>
+ 기본 하드웨어 오류 모드를 가져옵니다. (이 값은 커널 모드 전용입니다)
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessIoPortHandlers">
+	<summary>
+ 입출력 포트 핸들러를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessPooledUsageAndLimits">
+	<summary>
+ 풀 사용량과 제한량을 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessWorkingSetWatch">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessUserModeIOPL">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessEnableAlignmentFaultFixup">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessPriorityClass">
+	<summary>
+ 우선 순위를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessWx86Information">
+	<summary>
+ 사용되지 않는 멤버입니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessHandleCount">
+	<summary>
+ 핸들 개수를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessAffinityMask">
+	<summary>
+ CPU 선호도를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessPriorityBoost">
+	<summary>
+ 우선 순위 부스트 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.MaxProcessInfoClass">
+	<summary>
+ ProcessInfoClass의 최대 갯수(?)를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessWow64Information">
+	<summary>
+ 64비트 프로세스의 정보를 가져옵니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass.ProcessImageFileName">
+	<summary>
+ 이미지 파일의 이름 정보를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.ProcessInformationClass">
+	<summary>
+ 프로세스의 정보를 가져올 때 어떠한 정보를 가져올 것인지를 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.Terminate">
+	<summary>
+ 종료할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.CreateThread">
+	<summary>
+ 쓰레드를 생성할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.SetSessionId">
+	<summary>
+ 세션 식별자를 설정할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.VmOperation">
+	<summary>
+ 메모리 작업을 할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.VmRead">
+	<summary>
+ 메모리를 읽을 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.VmWrite">
+	<summary>
+ 메모리를 쓸 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.DuplicateHandle">
+	<summary>
+ 핸들을 복사할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.CreateProcess">
+	<summary>
+ 프로세스를 생성할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.SetQuota">
+	<summary>
+ 할당량을 설정할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.SetInformation">
+	<summary>
+ 정보를 설정할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.QueryInformation">
+	<summary>
+ 프로세스의 정보를 가져올 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.SuspendResume">
+	<summary>
+ 정지하거나 재개할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.QueryLimitedInformation">
+	<summary>
+ 프로세스의 정보를 제한적으로 가져올 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.AllAccessInXPOrLower">
+	<summary>
+ XP 이하의 운영체제에서의 모든 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.AllAccessInVistaOrHigher">
+	<summary>
+ 비스타 이상의 운영체제에서의 모든 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessAccess.MaximumAllowed">
+	<summary>
+ 최대한 허용 가능한 권한을 나타냅니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.ProcessAccess">
+	<summary>
+ 프로세스를 열 때 어떠한 권한으로 열 것인지 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.Terminate">
+	<summary>
+ 종료할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.SuspendResume">
+	<summary>
+ 정지하거나 재개할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.Alert">
+	<summary>
+ 경고할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.GetContext">
+	<summary>
+ 컨텍스트를 가져올 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.SetContext">
+	<summary>
+ 컨텍스트를 설정할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.SetInformation">
+	<summary>
+ 정보를 설정할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.QueryInformation">
+	<summary>
+ 정보를 가져올 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.SetThreadToken">
+	<summary>
+ 토큰을 설정할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.Impersonate">
+	<summary>
+ 가장할 수 있도록 허용하는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.DirectImpersonation">
+	<summary>
+ 토큰이 가장할 수 있도록 허용하는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.SetLimitedInformation">
+	<summary>
+ 제한된 정보를 설정할 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.QueryLimitedInformation">
+	<summary>
+ 제한된 정보를 가져올 수 있는 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.AllAccessInXPOrLower">
+	<summary>
+ XP 이하의 운영체제에서의 모든 권한을 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ThreadAccess.AllAccessInVistaOrHigher">
+	<summary>
+ Vista 이상의 운영체제에서의 모든 권한을 나타냅니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.ThreadAccess">
+	<summary>
+ 쓰레드를 열 때 어떠한 권한으로 열 것인지 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.TokenAccess">
+	<summary>
+ 토큰을 열 때 어떠한 권한으로 열 것인지 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.Toolhelp32Flags">
+	<summary>
+ 스냅샷을 열 때 어떠한 정보를 가져올 것인지 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.TokenInformationClass">
+	<summary>
+ 토큰의 정보를 가져올 때 어떠한 정보를 가져올 것인지를 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.DebuggedState.Unknown">
+	<summary>
+ 알 수 없음
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.DebuggedState.NotDebugged">
+	<summary>
+ 디버거가 부착되어 있지 않음
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.DebuggedState.Debugged">
+	<summary>
+ 디버거가 부착되어 있음
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.DebuggedState">
+	<summary>
+ 디버그 상태를 나타냅니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.Pid">
+	<summary>
+ 식별자를 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.Platform">
+	<summary>
+ 플랫폼을 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.MemoryUsage">
+	<summary>
+ 메모리 사용량을 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.Description">
+	<summary>
+ 설명을 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.Version">
+	<summary>
+ 버전을 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.Path">
+	<summary>
+ 실행 경로를 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.CommandLine">
+	<summary>
+ 명령줄 인수를 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.ThreadCount">
+	<summary>
+ 쓰레드 수를 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.Priority">
+	<summary>
+ 우선 순위를 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.HandleCount">
+	<summary>
+ 핸들 수를 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.GdiObjectCount">
+	<summary>
+ GDI 개체 수를 출력합니다.
+ </summary>
+</member><member name="F:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions.GdiUserCount">
+	<summary>
+ USER 개체 수를 출력합니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration.ProcessInfoDisplayOptions">
+	<summary>
+ 프로세스 목록을 리스트뷰에 출력할 때 어떠한 정보들을 출력할 지 결정하는 값들을 열거합니다.
+ </summary>
+</member><member name="T:AdvSystem.ReferenceCore.Enumeration">
+	<summary>
+ 라이브러리에서 사용되는 상수들을 모아놓은 클래스입니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.AffinityInfo.#ctor(System.UInt32)">
+	<summary>
+ PID를 이용하여 프로세스의 CPU 선호도 정보를 포함하는 AffinityInfo 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">CPU 선호도 정보를 가져올 대상 프로세스의 PID를 입력합니다.</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.AffinityInfo.IsCoreEnabled(System.Int32)">
+	<summary>
+ 지정한 CPU를 프로세스에서 사용할 수 있는지를 가져옵니다.
+ </summary>
+	<param name="Index">CPU 인덱스를 입력합니다. (인덱스는 0부터 시작합니다)</param>
+</member><member name="P:AdvSystem.Diagnostics.Process.AffinityInfo.AffinityMask">
+	<summary>
+ CPU 선호도를 가져옵니다. (2진수 형태의 문자열을 가져옵니다)
+ </summary>
+</member><member name="M:AdvSystem.Exceptions.Super.#ctor">
+	<summary>
+ 예외 클래스를 초기화합니다.
+ </summary>
+</member><member name="M:AdvSystem.Exceptions.Super.#ctor(System.String)">
+	<summary>
+ 지정된 메세지를 이용하여 예외 클래스를 초기화합니다.
+ </summary>
+	<param name="Message">오류를 설명하는 메세지입니다.</param>
+</member><member name="M:AdvSystem.Exceptions.Super.#ctor(System.String,System.Object)">
+	<summary>
+ 지정된 메세지와 추가 정보를 이용하여 예외 클래스를 초기화합니다.
+ </summary>
+	<param name="Message">오류를 설명하는 메세지입니다.</param>
+	<param name="Data">예외에 대한 추가 정보입니다.</param>
+	<remarks></remarks>
+</member><member name="P:AdvSystem.Exceptions.Super.AdditionalData">
+	<summary>
+ 예외에 대한 추가 정보를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Exceptions.Super.ErrorCode">
+	<summary>
+ 오류 코드를 가져옵니다.
+ </summary>
+</member><member name="T:AdvSystem.Exceptions.Super">
+	<summary>
+ 라이브러리에서 사용되는 예외의 최상위 클래스입니다. Exception 클래스를 상속하고, 추가 정보를 저장하는 AdditionalData 속성이 추가되었습니다.
+ </summary>
+</member><member name="M:AdvSystem.Exceptions.ProcessException.#ctor">
+	<summary>
+ 예외 클래스를 초기화합니다.
+ </summary>
+</member><member name="M:AdvSystem.Exceptions.ProcessException.#ctor(System.String)">
+	<summary>
+ 지정된 메세지를 이용하여 예외 클래스를 초기화합니다.
+ </summary>
+	<param name="Message">오류를 설명하는 메세지입니다.</param>
+</member><member name="M:AdvSystem.Exceptions.ProcessException.#ctor(System.String,System.Object)">
+	<summary>
+ 지정된 메세지와 추가 정보를 이용하여 예외 클래스를 초기화합니다.
+ </summary>
+	<param name="Message">오류를 설명하는 메세지입니다.</param>
+	<param name="Data">예외에 대한 추가 정보입니다.</param>
+	<remarks></remarks>
+</member><member name="T:AdvSystem.Exceptions.ProcessException">
+	<summary>
+ 프로세스를 대상으로 한 작업이 실패한 경우에 발생하는 예외입니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.InformationClassBase.setValidation(System.Boolean)">
+	<summary>
+ 유효성을 설정합니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.InformationClassBase.Id">
+	<summary>
+ 프로세스의 식별자를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.InformationClassBase.IsValid">
+	<summary>
+ 유효한 개체인지 확인합니다.
+ </summary>
+</member><member name="T:AdvSystem.Diagnostics.Process.InformationClassBase">
+	<summary>
+ 특정 프로세스에 대한 CPU 선호도 정보를 저장합니다.
+ </summary>
+</member><member name="M:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.#ctor(System.UInt32,AdvSystem.ReferenceCore.Structure.LdrModule)">
+	<summary>
+ 지정한 프로세스의 모듈 목록을 저장하는 ModuleList 클래스의 새 개체를 초기화합니다.
+ </summary>
+	<param name="PID">모듈 목록을 가져올 프로세스의 식별자를 입력합니다.</param>
+	<param name="Ldr">모듈에 대한 정보를 포함하고 있는 LdrModule 구조체를 입력합니다.</param>
+	<remarks></remarks>
+</member><member name="P:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.BaseAddress">
+	<summary>
+ 모듈의 시작 주소를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.EntryPoint">
+	<summary>
+ 모듈의 진입점 주소를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.Size">
+	<summary>
+ 모듈 파일의 크기를 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.Name">
+	<summary>
+ 모듈의 이름을 가져옵니다.
+ </summary>
+</member><member name="P:AdvSystem.Diagnostics.Process.ModuleList.ModuleInfo.Path">
+	<summary>
+ 모듈의 이름을 포함한 경로를 가져옵니다.
+ </summary>
+</member><member name="M:AdvSystem.Computer.GetSystemArchitecture">
+	<summary>
+ 시스템 운영체제의 프로세서 구성 정보를 가져옵니다.
+ </summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AdvSystem.Diagnostics.Process" Collapsed="true">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="AdvSystem.Diagnostics.Process.PrivilegeList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.PriorityInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.ModuleList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.AffinityInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.AccessInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.MemoryUsageInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.IconInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.InformationClassBase" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\SubClass\Base\InformationClassBase.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AdvSystem.Diagnostics.Process.StringInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Diagnostics\Process\Process.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AJ3CAYCAACCIQmIuCQAAAAQCwBBsgCAgCEAEDBlAAAE=</HashCode>
+      <FileName>Diagnostics\Diagnostics.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.ReferenceCore.Api" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQUIIAGEmZApBAMYAHAADKgJQJBgCAsEkggikgRoBQA=</HashCode>
+      <FileName>ReferenceCore\Api\Api.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.ReferenceCore.Delegate" Collapsed="true">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReferenceCore\Delegate\Delegate.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.ReferenceCore.Enumeration" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAIAAAAAABAAQAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>ReferenceCore\Enumeration\Enumeration.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.ReferenceCore.Structure" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReferenceCore\ReferenceCore.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.Computer" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReferenceCore\Structure\Computer.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.Diagnostics.Thread" Collapsed="true">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgIAgAAAEABAAAAAAAAAAAAACAQAIAEABgAAAE=</HashCode>
+      <FileName>Diagnostics\Diagnostics.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.Devices.Mouse" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQAQAACAAAQAAA=</HashCode>
+      <FileName>Devices\Devices.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvSystem.Exceptions.Super" Collapsed="true">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAEAAAAAAAgAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

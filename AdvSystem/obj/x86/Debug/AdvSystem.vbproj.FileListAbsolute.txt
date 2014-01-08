@@ -1,0 +1,10 @@
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\bin\x86\Debug\AdvSystem.dll
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\bin\x86\Debug\AdvSystem.pdb
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\bin\x86\Debug\AdvSystem.xml
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\x86\Debug\AdvSystem.Resources.resources
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\x86\Debug\AdvSystem.dll
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\x86\Debug\AdvSystem.xml
+C:\Users\hWang\Desktop\AdvSystem\SOURCE\AdvSystem\AdvSystem\obj\x86\Debug\AdvSystem.pdb
